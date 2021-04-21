@@ -16,4 +16,9 @@ public class HelloWorldController {
 		return "Hello From Bridgelabz";
 	}
 	
+	//http://localhost:8080/query?name=Akash
+	@RequestMapping(value = {"/query"}, method = RequestMethod.GET)
+	public String sayHello(@RequestParam(value = "name") String name) {
+		return "Hello " + name + "!";
+	}
 }
